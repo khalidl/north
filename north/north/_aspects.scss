@@ -9,8 +9,13 @@
 // Mixins
 //////////////////////////////
 @mixin aspect($name) {
-  @at-root #{&}--#{aspect($name)} {
+  @include aspects($name) {
     @content;
   }
 }
 
+@mixin aspects($names...) {
+  @include north--core('aspect', $names) {
+    @content;
+  }
+}

@@ -1,9 +1,9 @@
 //////////////////////////////
-// Message Component
+// Content Component
 //
 // The partial and folder structure for this component should be as follows:
-// _message.scss
-// message (folder)
+// _content.scss
+// content (folder)
 //   _extends.scss
 //   _mixins.scss
 //   _variables.scss
@@ -16,46 +16,24 @@
 //  - End styling block for specific component aspect:   {component--aspect}@
 //////////////////////////////
 
-@import "message/variables";
-@import "message/mixins";
-@import "message/extends";
+@import "content/variables";
+@import "content/mixins";
+@import "content/extends";
 
 //////////////////////////////
-// @{message}
-// Styling for Message Component
-.message {
+// @{base}
+// Styling for Content Component
+.base {
 
 }
-// {message}@
+// {base}@
 //////////////////////////////
 
-
 //////////////////////////////
-// @{message--status}
+// @{base--content}
 // Status styling for Message Component
-.message--STATUS {
-  @extend %message--STATUS;
+.base--CONTENT {
+
 }
-// {message--status}@
+// {base--content}@
 //////////////////////////////
-
-
-//////////////////////////////
-// @{message--warning}
-// Warning styling for Message Component
-.message--WARNING {
-  @extend %message--WARNING;
-}
-// {message--warning}@
-//////////////////////////////
-
-
-//////////////////////////////
-// @{message--error}
-// Error styling for Message Component
-.message--ERROR {
-  @extend %message--ERROR;
-}
-// {message--error}@
-//////////////////////////////
-

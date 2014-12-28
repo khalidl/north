@@ -1,7 +1,7 @@
 //////////////////////////////
 // Functions
 //////////////////////////////
-@function element($name) {
+@function n-element($name) {
   @return to-lower-case($name);
 }
 
@@ -9,8 +9,13 @@
 // Mixins
 //////////////////////////////
 @mixin element($name) {
-  @at-root #{&}--#{element($name)} {
+  @include aspects($name) {
     @content;
   }
 }
 
+@mixin elements($names...) {
+  @include north--core('element', $names) {
+    @content;
+  }
+}
