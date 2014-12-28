@@ -1,28 +1,37 @@
 <!doctype html>
-<html lang="en" ng-app="northApp">
+<html lang="{{lang}}" dir="{{dir}}" class="no-js">
 <head>
   <meta charset="UTF-8">
-  <title>North: Standards to Align and Guide Your Project</title>
-<!-- build:css css/style.css?__inline=true -->
+  <title>North</title>
+  <meta name="viewport" content="initial-scale=1.0">
+<!-- build:css css/style.css -->
 <link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="/bower_components/prism/themes/prism-okaidia.css">
+<!-- endbuild -->
+<!-- build:js js/fonts.js -->
+<script src="bower_components/loadCSS/loadCSS.js"></script>
+<script src="js/load.js"></script>
 <!-- endbuild -->
 </head>
-<body ng-controller="NorthCtrl">
-  <header>
-    Search: <input ng-model="search">
+<body>
+  <header class="banner" role="banner">
+    <h1 class="banner--title"><a href="/"><span class="banner--logo" aria-hidden="true">North</span><span class="banner--wordmark">North</span></a></h1>
   </header>
-  <article class="base--STYLED">
+  <main class="__main" role="main">
+    {{nav}}
     {{content}}
-  </article>
-
-    <!-- build:js js/app.js?__inline=true -->
+  </main>
+  <footer class="footer" role="contentinfo">
+    <small class="footer--copyright">© 2013-{{year}} <a href="https://snugug.com">Sam Richard</a> <a href="http://twitter.com/snugug" class="footer--icon">Twitter</a> <a href="https://github.com/snugug" class="footer--icon">Github</a> | <a href="https://github.com/Snugug/north/blob/master/LICENSE">MIT</a> | <a href="https://github.com/snugug/north">Source</a> | <a href="https://github.com/Snugug/north/releases">v{{version}}</a></small>
+  </footer>
+    <!-- build:js js/app.js -->
+    <script src="/bower_components/borealis/dist/borealis.min.js"></script>
+    <script src="/js/nav.js"></script>
     <script src="/bower_components/prism/prism.js"></script>
     <script src="/bower_components/prism/components/prism-javascript.min.js"></script>
     <script src="/bower_components/prism/components/prism-markup.min.js"></script>
     <script src="/bower_components/prism/components/prism-ruby.min.js"></script>
     <script src="/bower_components/prism/components/prism-scss.min.js"></script>
-    <script src="/js/working.js"></script>
+    <script src="/bower_components/prism/components/prism-bash.min.js"></script>
     <!-- endbuild -->
 </body>
 </html>
